@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		.headline--default {
+			width: 300px;
+			height: 300px;
+			background-color: black;
+			transition: height 1s;
+			transition: width 1s;
+			-webkit-border-radius: 100px;
+			-moz-border-radius: 100px;
+			border-radius: 100px;
+		}
+		.headline--active{
+			width: 150px;
+			height: 150px;
+			background-color: rgb(255, 95, 122);
+			font-size: 10px;
+		}
+	</style>
+</head>
+<body>
+<div class="headline--default" onclick="makeActive()">
+</div>
+</body>
+<script>
+	function makeActive() {
+		var headline = event.srcElement;
+		if(headline.classList.contains('headline--active')) {
+			headline.classList.remove('headline--active');
+		} else {
+			headline.classList.add('headline--active');
+		}
+	}
+</script>
+</html>
